@@ -1,0 +1,88 @@
+.container{
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.section{
+  padding: 10rem 0;
+}
+.header{
+  background: #252525;
+  position: fixed;top:0;
+  left: 0;right: 0;
+  padding: 3rem 4rem;
+  &__inner{position:relative;display: flex;justify-content: space-between;align-items: center;
+    .logo{
+      a{}
+    }
+
+  }
+  &-bookmark{
+    color: #fff;border-radius: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;border:1px solid #fff;
+    padding: 1rem 2rem;
+  }
+}
+
+.sch{
+  position: absolute;left: 50%;transform: translateX(-50%);
+  margin: 0 auto;
+  &-box{position: relative;
+    width: 70rem;
+    &__input{width: 100%;
+      padding: 1rem 3rem;
+      height: 5.4rem;
+      font-size: 1.8rem;
+      color: #fff;
+      background: #ffffff2b;border-radius: 50px;
+      &::placeholder{
+        color: #ccc;}
+
+    }
+  }
+  &-btn{
+    color: #fff;
+    font-size: 1.4rem;
+    position: absolute;right: 1rem;
+    top:50%;transform: translateY(-50%);
+  }
+}
+
+.poster{
+  &__wrap{display: flex;align-items: stretch;
+    gap:3rem;flex-wrap: wrap;
+  }
+  &-card{border-radius: 20px;
+    background: #111;
+    width: 23%;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,.5);
+    
+    &__title{
+      font-size:2rem;
+      font-weight: 600;
+      margin-bottom: 1.4rem;min-height: 5.4rem;
+      line-height: 130%;
+      color: #fff;}
+    &__type{
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #ccc;}
+    &__year{border-top:1px dashed  #ffffff4a;
+      padding-top: 1.2rem;
+      margin-top: .5rem;     font-size: 1.5rem;
+      font-weight: 500;
+      color: #eee;}
+    &__img{
+      height: 29rem;
+      img{
+        height: 100%;
+        width: 100%;
+        
+      }
+    }
+  }
+  &-bot{
+    padding: 2rem;
+  }
+}
