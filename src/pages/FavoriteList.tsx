@@ -62,50 +62,45 @@ const FavoriteList = () => {
         setFavorites([]);
     };
     return (
-        <div style={{ padding: '20px' }}>
-            <h1>⭐ 즐겨찾기 목록</h1>
-            <button
-                onClick={clearAllFavorites}
-                style={{
-                    padding: '8px 16px',
-                    backgroundColor: '#888',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                }}
-            >
-                모두 삭제
-            </button>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-                {favorites.map((movie) => (
-                    <li key={movie.imdbID} style={{ marginBottom: '20px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                            <Link to={`/movie/${movie.imdbID}`} style={{ textDecoration: 'none', color: 'black' }}>
-                                <img src={movie.Poster} alt={movie.Title} width="100" />
-                            </Link>
-                            <div>
-                                <h3>{movie.Title} ({movie.Year})</h3>
-                                <button
-                                    onClick={() => removeFromFavorites(movie.imdbID)}
-                                    style={{
-                                        marginTop: '8px',
-                                        padding: '6px 12px',
-                                        backgroundColor: '#f44336',
-                                        color: 'white',
-                                        border: 'none',
-                                        borderRadius: '4px',
-                                        cursor: 'pointer',
-                                    }}
-                                >
-                                    삭제
-                                </button>
-                            </div>
+        <section className="section">
+        <div className="container">
+            <div className="flex-btw">
+                <h2 className="title">즐겨찾기 목록</h2>
+                <button
+                    onClick={clearAllFavorites}
+                 className="btn-del"
+                >
+                    모두 삭제
+                </button>
+            </div>
+                        <div className="poster">
+                            <ul className="poster__wrap">
+                                {favorites.map((movie) => (
+                                    <li className="poster-card"  key={movie.imdbID} >
+                                        <button
+                                            onClick={() => removeFromFavorites(movie.imdbID)}
+                                            className="poster-card-del"
+                                        >
+                                            삭제
+                                        </button>
+                                        <Link to={`/movie/${movie.imdbID}`} className="poster-card__link">
+                                            <div className="poster-card__img">
+                                                <img src={movie.Poster} alt={movie.Title} />
+                                            </div>
+                                            <div className="poster-bot">
+                                                <p className="poster-card__title">
+                                                    {movie.Title}
+
+                                                </p>
+                                                <p className="poster-card__year">{movie.Year}</p>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                    </li>
-                ))}
-            </ul>
         </div>
+        </section>
     );
 };
 

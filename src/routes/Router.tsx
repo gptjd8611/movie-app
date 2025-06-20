@@ -21,6 +21,7 @@ const Router = () => {
        <>
             <Header onSearch={handleSearch}/>
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search />} />
                 {/*<Route path="/" element={<MovieSearchPage searchValue={searchValue}/>} />*/}
                 <Route path="/movie/:imdbID" element={<MovieDetailPage />} />

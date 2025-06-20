@@ -8,9 +8,11 @@ const Header = ({ onSearch })=>{
     return(
         <header className="header">
             <div className="header__inner">
-                <h1 className="logo"><a href=""><img src={logo} alt="" /></a></h1>
+                <Link to={`/`} >
+                    <h1 className="logo"><img src={logo} alt="" /></h1>
+                </Link>
                 <SearchBar onSearch={onSearch}/>
-                <Link to="/favorites" className="header-bookmark">⭐즐겨찾기</Link>
+                <Link to="/favorites" className="btn-bookmark">⭐즐겨찾기</Link>
             </div>
         </header>
     )

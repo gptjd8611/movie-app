@@ -63,26 +63,31 @@ const MovieDetail = ()=>{
     if (!movie) return <p>로딩 중...</p>;
 
     return(
-        <div>
-            <h1>{movie.Title}</h1>
-            <p>{movie.Plot}</p>
-            <p>감독: {movie.Director}</p>
-            <img src={movie.Poster} alt={movie.Title} />
-            {/* ⭐ 즐겨찾기 버튼 */}
-            <button
-                onClick={toggleFavorite}
-                style={{
-                    marginTop: '16px',
-                    padding: '8px 16px',
-                    backgroundColor: isFavorite ? '#ffcc00' : '#ccc',
-                    border: 'none',
-                    borderRadius: '8px',
-                    cursor: 'pointer',
-                }}
-            >
-                {isFavorite ? '★ 즐겨찾기 해제' : '☆ 즐겨찾기 추가'}
-            </button>
+        <section className="section">
+        <div className="container">
+            <div className="movie-detail flex-box">
+                <div className="movie-detail__img">
+                    <img src={movie.Poster} alt={movie.Title} />
+                </div>
+                <div className="movie-detail__info">
+
+                    <p className="info-title">{movie.Title}</p>
+                    <dl className="info-lists">
+                        <dd>개봉년도: {movie.Year}</dd>
+                        <dd>감독: {movie.Director}</dd>
+                        <dd className="plot">{movie.Plot}</dd>
+                    </dl>
+                    <button
+                        onClick={toggleFavorite}
+                       className="btn-bookmark"
+                    >
+                        {isFavorite ? '⭐ 즐겨찾기 해제' : '⭐ 즐겨찾기 추가'}
+                    </button>
+                </div>
+            </div>
+
         </div>
+        </section>
     )
 }
 export  default MovieDetail;

@@ -28,9 +28,9 @@ const Search = () => {
     return (
         <section className="section">
             <div className="container">
-                <h1>
+                <h2 className="title">
                     <strong className="col">'{searchValue}'</strong>에 대한 검색 결과입니다.
-                </h1>
+                </h2>
                 <div className="poster">
                     <ul className="poster__wrap">
                         {movies.map((movie) => (

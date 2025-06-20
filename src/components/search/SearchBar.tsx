@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import sch from "../../assets/images/sch.svg"
 
 const SearchBar = ()=>{
 
@@ -28,7 +29,7 @@ const SearchBar = ()=>{
                     onChange={(e) => setInputValue(e.target.value)}
                 />
                 </div>
-                <button type="submit"  className="sch-btn">검색</button>
+                <button type="submit"  className="sch-btn"><img src={sch} alt=""/></button>
             </form>
 
         </div>

@@ -48,3 +48,16 @@ export const getMovieDetail = async (id: string) => {
         throw error;
     }
 };
+
+export const fetchPopularMovies = async () => {
+    try {
+        const response = await fetch(`${BASE_URL}?apikey=${API_KEY}&s=2024`);
+        if (!response.ok) throw new Error('요청 실패');
+        const data = await response.json();
+        if (data.Response === 'False') throw new Error(data.Error || '검색 결과 없음');
+        return data.Search; // 이 부분 주의!!
+    } catch (error) {
+        console.error('API 오류:', error);
+        throw error;
+    }
+};
