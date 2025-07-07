@@ -1,7 +1,15 @@
-html{
-  font-size: 10px;}
+html {
+  font-size: 10px;
+}
 
-.flex-box{
+.flex-box {
   display: flex;
 }
-.flex-btw{display: flex;justify-content: space-between;align-items: center}
+.flex-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col {
+  color: #ff5700;
+}

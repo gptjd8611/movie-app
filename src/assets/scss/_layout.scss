@@ -1,14 +1,14 @@
-.container{
-  max-width: 120rem;
+.container {
+  max-width: 114rem;
   width: 100%;
   margin: 0 auto;
 }
-.section{
+.section {
   padding: 19rem 0;
 }
-.btn-del{
+.btn-del {
   padding: 1.4rem 2rem;
-  background-color: #e20808;
+  background-color: #b90a0a;
   color: white;
   border: none;
   border-radius: 4px;
@@ -16,141 +16,173 @@
   font-size: 1.8rem;
   font-weight: 600;
 }
-.btn-bookmark{
-  color: #fff;border-radius: 40px;
+.btn-bookmark {
+  color: #fff;
+  border-radius: 40px;
   font-size: 1.8rem;
-  font-weight: 5600;border:1px solid #eee;
+  font-weight: 5600;
+  border: 1px solid #eeeeee83;
   padding: 1.4rem 2rem;
 }
-.header{
+.header {
   background: #000;
-  position: fixed;top:0;
-  left: 0;right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 3rem 4rem;
   z-index: 1;
-  &__inner{position:relative;display: flex;justify-content: space-between;align-items: center;
-    .logo{
-      a{}
-    }
-
-  }
-
-}
-
-.sch{
-  position: absolute;left: 50%;transform: translateX(-50%);
-  margin: 0 auto;
-  &-box{position: relative;
-    width: 70rem;
-    &__input{width: 100%;
-      padding: 1rem 3rem;
-      height: 6.2rem;
-      font-size: 1.8rem;
-      color: #fff;
-      background: #ffffff2b;border-radius: 50px;
-      &::placeholder{
-        color: #bbb;}
-
-    }
-  }
-  &-btn{
-    color: #fff;
-    font-size: 1.4rem;
-    position: absolute;right: 2.8rem;
-    top:50%;transform: translateY(-50%);
-  }
-}
-
-.poster{
-  &__wrap{display: flex;align-items: stretch;
-    gap:3rem;flex-wrap: wrap;
-  }
-  &-card{border-radius: 28px;
+  &__inner {
     position: relative;
-    background:#ffffff1f;
-    width: 23%;
-    box-shadow: 0 2px 7px 1px rgba(0,0,0,.5);
-    &-del{
-      position: absolute;
-      z-index: 1;
-      top:1rem;right:1rem;
-      background: #222;
-      color: #fff;
-      font-weight: 600;border-radius: 4px;
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
-      box-shadow: 0 3px 4px 1px rgba(0,0,0,.5);
-    }
-    &__title{
-      font-size:2rem;
-      font-weight: 500;
-      margin-bottom: 1.4rem;min-height: 5.4rem;
-      line-height: 138%;
-      color: #fff;
-     }
-    &__type{
-      font-weight: 500;
-      font-size: 1.8rem;
-      color: #ccc;}
-    &__year{border-top:1px dashed  #ffffff4a;
-      padding-top: 1.5rem;
-      margin-top: .75rem;     font-size: 1.5rem;
-      font-weight: 500;
-      color: #ddd;}
-    &__img{
-      height: 29rem;
-      img{
-        height: 100%;
-        width: 100%;
-        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      a {
       }
     }
   }
-  &-bot{
+}
+
+.sch {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  &-box {
+    position: relative;
+    width: 70rem;
+    &__input {
+      width: 100%;
+      padding: 1rem 3rem;
+      height: 5.8rem;
+      font-size: 1.8rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.168627451);
+      border-radius: 50px;
+      border: 2px solid #e6e6e629;
+      &::placeholder {
+        font-size: 1.8rem;
+        color: #bbb;
+      }
+    }
+  }
+  &-btn {
+    color: #fff;
+    font-size: 1.4rem;
+    position: absolute;
+    right: 2.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.poster {
+  &__wrap {
+    display: flex;
+    align-items: stretch;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  &-card {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff1f;
+    width: 23%;
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.5);
+
+    &-del {
+      position: absolute;
+      z-index: 1;
+      top: 1rem;
+      right: 1rem;
+      background: #b90a0a;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 4px;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.5);
+    }
+    &__title {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.4rem;
+      min-height: 5.4rem;
+      line-height: 138%;
+      color: #fff;
+    }
+    &__type {
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #ccc;
+    }
+    &__year {
+      border-top: 1px dashed #ffffff4a;
+      padding-top: 1.5rem;
+      margin-top: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #ddd;
+    }
+    &__img {
+      height: 29rem;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &-bot {
     padding: 2rem;
   }
 }
 
-.movie-detail{gap:3.8rem;
+.movie-detail {
+  gap: 3.8rem;
   position: relative;
-  &__img{
+  &__img {
     width: 30%;
-    img{
-      width: 100%;}
+    img {
+      width: 100%;
+    }
   }
-  &__info{
+  &__info {
     width: 63%;
-    button{
-      position: absolute;right: 0;top:0
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 
-  .info{
-    &-title{
+  .info {
+    &-title {
       margin-bottom: 4rem;
       color: #fff;
       font-size: 4rem;
       font-weight: 600;
       padding-right: 19rem;
-      line-height: 140%;
+      line-height: 129%;
     }
-    &-lists{
-      dd{
-        line-height: 150%;
+    &-lists {
+      dd {
         margin-bottom: 1.2rem;
         font-size: 1.9rem;
         font-weight: 500;
         color: #ccc;
-        &.plot{
+        &.plot {
           font-size: 1.8rem;
-          color: #acacac;  line-height: 150%;
+          color: #acacac;
+          line-height: 150%;
           font-weight: 300;
         }
       }
     }
   }
 }
-.title{
+.title {
   font-size: 3.5rem;
   font-weight: 600;
   color: #fff;
