@@ -85,12 +85,12 @@
     flex-wrap: wrap;
   }
   &-card {
-    border-radius: 12px;
     overflow: hidden;
     position: relative;
-    background: #ffffff1f;
+    background: rgb(255 255 255 / 9%);
     width: 23%;
-    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 10px 3px rgb(205 172 14 / 25%);
+
 
     &-del {
       position: absolute;
