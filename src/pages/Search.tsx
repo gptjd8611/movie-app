@@ -2,8 +2,15 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { searchMovies } from '../api/api';
 
+type Movie = {
+    imdbID: string;
+    Title: string;
+    Year: string;
+    Type: string;
+    Poster: string;
+};
 const Search = () => {
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState<Movie[]>([]);
     const location = useLocation();
 
     // 쿼리스트링에서 검색어 추출
