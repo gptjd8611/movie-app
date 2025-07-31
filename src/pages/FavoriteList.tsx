@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMovieDetail } from "../api/api";
 import { Link } from "react-router-dom";
+import del from "../assets/images/del.svg";
 
 const FAVORITES_KEY = "favoriteMovies";
 
@@ -66,8 +67,8 @@ const FavoriteList = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="flex-btw">
-          <h2 className="title">즐겨찾기 목록</h2>
+        <div className="flex-box">
+          <h2 className="title mb-0">즐겨찾기 목록</h2>
           <button onClick={clearAllFavorites} className="btn-del">
             All Clear
           </button>
@@ -80,7 +81,7 @@ const FavoriteList = () => {
                   onClick={() => removeFromFavorites(movie.imdbID)}
                   className="poster-card-del"
                 >
-                  삭제
+                  <img src={del} alt="삭제 아이콘" />
                 </button>
                 <Link
                   to={`/movie/${movie.imdbID}`}

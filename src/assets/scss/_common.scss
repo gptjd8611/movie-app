@@ -5,7 +5,8 @@ html {
 .flex-box {
   display: flex;
 }
-.flex-btw {
+.flex-box {
+  margin-bottom: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,3 +14,5 @@ html {
 .col {
   color: #ff5700;
 }
+.mb-0{
+  margin-bottom: 0!important;}
