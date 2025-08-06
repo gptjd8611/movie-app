@@ -193,3 +193,19 @@
   color: #fff;
   margin-bottom: 5rem;
 }
+
+.no-data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45rem;
+  border-top: 1px solid #3b3b3b;
+
+  .no-favorites{
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: #666;
+
+  }
+}

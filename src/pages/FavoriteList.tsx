@@ -53,11 +53,10 @@ const FavoriteList = () => {
 
     // UI에서도 제거
     setFavorites((prev) => prev.filter((movie) => movie.imdbID !== id));
+
   };
 
-  if (loading) return <p>로딩 중...</p>;
 
-  if (favorites.length === 0) return <p>즐겨찾기한 영화가 없습니다.</p>;
 
   //모두 제거
   const clearAllFavorites = () => {
@@ -69,11 +68,17 @@ const FavoriteList = () => {
       <div className="container">
         <div className="flex-box">
           <h2 className="title mb-0">즐겨찾기 목록</h2>
+
           <button onClick={clearAllFavorites} className="btn-del">
             All Clear
           </button>
         </div>
         <div className="poster">
+          {favorites.length === 0 && !loading ? (
+              <div className="no-data">
+               <p className="no-favorites">즐겨찾기한 영화가 없습니다.</p>
+              </div>
+              ) :(
           <ul className="poster__wrap">
             {favorites.map((movie) => (
               <li className="poster-card" key={movie.imdbID}>
@@ -98,6 +103,7 @@ const FavoriteList = () => {
               </li>
             ))}
           </ul>
+              )}
         </div>
       </div>
     </section>

@@ -79,7 +79,7 @@ const MovieDetail = ()=>{
                     </dl>
                     <button
                         onClick={toggleFavorite}
-                       className=""
+
                         className={isFavorite ? "btn-bookmark  active" : "btn-bookmark "}
                     >
                         {isFavorite ? '⭐ 즐겨찾기 해제' : '⭐ 즐겨찾기 추가'}
